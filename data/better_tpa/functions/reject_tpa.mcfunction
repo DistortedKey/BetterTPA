@@ -1,4 +1,4 @@
-scoreboard players operation @a[scores={waiting=1..}] math = @s waiting
+execute as @a[scores={waiting=1..}] run scoreboard players operation @s math = @s waiting
 
 scoreboard players operation @a[scores={math=1..}] math -= @s PlayerId
 
