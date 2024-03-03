@@ -1,6 +1,7 @@
+# enable the player to select a target
 scoreboard players enable @s tpaTo
 tellraw @s ["",{"text":"Choose a player to teleport to:","color":"aqua"}]
-
+# display all targets with clickable selectors
 execute if entity @a[scores={PlayerId=1}] run tellraw @s ["",{"selector":"@a[scores={PlayerId=1}]"}," [",{"text":"Select","color":"dark_green","clickEvent":{"action":"run_command","value":"/trigger tpaTo set 1"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click to teleport","color":"aqua"}]}},"]"]
 execute if entity @a[scores={PlayerId=2}] run tellraw @s ["",{"selector":"@a[scores={PlayerId=2}]"}," [",{"text":"Select","color":"dark_green","clickEvent":{"action":"run_command","value":"/trigger tpaTo set 2"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click to teleport","color":"aqua"}]}},"]"]
 execute if entity @a[scores={PlayerId=3}] run tellraw @s ["",{"selector":"@a[scores={PlayerId=3}]"}," [",{"text":"Select","color":"dark_green","clickEvent":{"action":"run_command","value":"/trigger tpaTo set 3"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click to teleport","color":"aqua"}]}},"]"]
