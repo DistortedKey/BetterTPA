@@ -10,6 +10,8 @@ tellraw @a[scores={math=0}] ["",{"selector":"@s"},{"text":" would like to tp to 
 # set the requestee to be wating for the selection
 scoreboard players operation @s waiting = @s tpaTo
 
+tellraw @s {"text":"You have sent a request","color":"aqua"}
+
 # reset temporary scores
 scoreboard players reset @a math
 scoreboard players reset @s tpaTo

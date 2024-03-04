@@ -3,6 +3,8 @@ execute as @a[scores={waiting=1..}] run scoreboard players operation @s math = @
 # subtract target value from math, results with matching value result with 0
 scoreboard players operation @a[scores={math=1..}] math -= @s PlayerId
 
+tellraw @s {"text":"Player(s) accepted","color":"green"}
+
 # tell matching waiters the bad news ):
 tellraw @a[scores={math=0}] {"text":"Your tp request has been denied","color":"red"}
 scoreboard players set @a[scores={math=0}] waiting 0
